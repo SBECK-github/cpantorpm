@@ -268,7 +268,7 @@ sub _args {
 #   disttag    => %{?dist}
 #   epoch      =>                        The epoch number (set by --epoch)
 #   group      => Development/Libraries
-#   url        => http://search.cpan.org/dist/Foo-Bar/
+#   url        => https://metacpan.org/dist/Foo-Bar/
 #   license    => GPL+ or Artistic
 #   source     => http://www.cpan.org/authors/id/S/SB/SBECK/Foo-Bar-1.0.tar.gz
 #   packager   => PACKAGER
@@ -1487,7 +1487,7 @@ sub _make_spec {
    $package{'disttag'} = $$self{'disttag'};
    $package{'url'}     = ($package{'from'} eq 'url' ?
                           $package{'fromsrc'} :
-                          "http://search.cpan.org/dist/$package{name}/");
+                          "https://metacpan.org/dist/$package{name}");
    $package{'epoch'}   = $$self{'epoch'}  if ($$self{'epoch'} ne '');
    $package{'group'}   = $$self{'group'};
    $package{'license'} = ($package{'m_license'} ?
